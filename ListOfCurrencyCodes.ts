@@ -1,5 +1,5 @@
 import currencyCodes = require('currency-codes');
 
-export const getListOfCurrencies = () => {
+export const getListOfCurrencyCodes = () => {
   return currencyCodes.codes();
 }

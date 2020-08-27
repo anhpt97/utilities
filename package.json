@@ -6,9 +6,12 @@
   "private": true,
   "license": "UNLICENSED",
   "dependencies": {
+    "axios": "^0.20.0",
     "currency-codes": "^2.1.0",
+    "dotenv": "^8.2.0",
     "geolib": "^3.3.1",
     "i18n-iso-countries": "^6.0.0",
+    "moment": "^2.27.0",
     "usa-states": "^0.0.5"
   },
   "devDependencies": {
