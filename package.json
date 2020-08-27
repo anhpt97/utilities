@@ -6,16 +6,20 @@
   "private": true,
   "license": "UNLICENSED",
   "dependencies": {
+    "accounting": "^0.4.1",
     "axios": "^0.20.0",
     "currency-codes": "^2.1.0",
     "dotenv": "^8.2.0",
     "geolib": "^3.3.1",
     "i18n-iso-countries": "^6.0.0",
     "moment": "^2.27.0",
+    "numeral": "^2.0.6",
     "usa-states": "^0.0.5"
   },
   "devDependencies": {
+    "@types/accounting": "^0.4.1",
     "@types/node": "^14.6.0",
+    "@types/numeral": "^0.0.28",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.2"
   }
