@@ -13,6 +13,5 @@ export const getListOfExchangeRates = async (baseCurrency = 'USD', date?: string
     `https://openexchangerates.org/api/${date && moment(date).isValid() ? `historical/${moment(date).format('YYYY-MM-DD')}.json` : 'latest.json'}`
     + `?app_id=${process.env.OPEN_EXCHANGE_RATES_APP_ID}&base=${baseCurrency}`
   )).data;
-  console.log(rates);
   return rates;
 }
