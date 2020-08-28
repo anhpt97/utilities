@@ -29,4 +29,7 @@ console.log(numeral(123456789).format('0,0.00 $'));
 // 123,456,789.00 $
 
 console.log(numeral(1234).format('($ 0.00a)'));
-// $ 123.46 m
+// $ 1.23k
+
+console.log(numeral(123456789).format('($ 0.00a)'));
+// $ 123.46m
