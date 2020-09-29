@@ -24,10 +24,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/pdfmake@^0.1.14":
-  version "0.1.14"
-  resolved "https://registry.yarnpkg.com/@types/pdfmake/-/pdfmake-0.1.14.tgz#7aced5b2f89848c946e81a52ad3352a91f8198a7"
-  integrity sha512-PlBAUHVaPGwuNyeCvptsdsLKAYlm+5vFi/eL34PmfrNyykz7DMIU/lcx9wijMm5WJ2YkH9A1qFymM7xgC+O+7Q==
+"@types/pdfmake@^0.1.15":
+  version "0.1.15"
+  resolved "https://registry.yarnpkg.com/@types/pdfmake/-/pdfmake-0.1.15.tgz#383a8fca407612a580b82d1ca496d39001aee102"
+  integrity sha512-uyKefZzC1OUTKoUdY0fU9n7BjciSSYPHq2KLQmGNejeZn6Xo6hI04xhAGk368Rv9wHjKo36IGLIVIysvhrGVJQ==
   dependencies:
     "@types/node" "*"
     "@types/pdfkit" "*"
@@ -749,10 +749,10 @@ http-signature@~1.2.0:
     jsprim "^1.2.2"
     sshpk "^1.7.0"
 
-i18n-iso-countries@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/i18n-iso-countries/-/i18n-iso-countries-6.0.0.tgz#b707941d4cce34c9d5f21033c6cc733acbbbd7b8"
-  integrity sha512-2YOLRUNrnOq/sVchB6PfOgZ4E0rRMfxxy+QMhjv+2fiJHMidmmmb24UPHwXmzxyybB8mFPU+/uE46ebLOJIrpQ==
+i18n-iso-countries@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/i18n-iso-countries/-/i18n-iso-countries-6.1.0.tgz#898ef755d91a35fa6f5f328b06bce84e43fff243"
+  integrity sha512-sUlRC0D3OQbHgp2JXCCsmHjCDpqguAuNFWmob5m/BhFRTEgPJYWYUgFcrfBvmJI844JfarWprvRybO9HaDJOfA==
   dependencies:
     diacritics "1.3.0"
 
