@@ -16,7 +16,7 @@ export class MailgunService {
       to: recipient,
       subject: content.subject,
       html: content.html,
-      attachment: content.attachments.map((file: mailgun.AttachmentParams) => new this.mailgun.Attachment({ data: file.data, filename: file.filename })),
+      attachment: content.attachments.map(({ data, filename }) => new this.mailgun.Attachment({ data, filename })),
       // attachments: [
       //   {
       //     data: file.buffer,
