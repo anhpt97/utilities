@@ -14,6 +14,12 @@ export class SendGridService {
       subject: content.subject,
       html: content.html,
       attachments: content.attachments,
+      // attachments: [
+      //   {
+      //     content: file.buffer.toString('base64'),
+      //     filename: file.originalname,
+      //   },
+      // ],
     });
   }
 }
