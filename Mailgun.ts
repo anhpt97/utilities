@@ -10,13 +10,19 @@ export class MailgunService {
     });
   }
 
-  send(recipient: string, content: { subject: string, html: string, attachments?: any }) {
+  send(recipient: string, content: { subject: string, html: string, attachments?: mailgun.AttachmentParams[] }) {
     return this.mailgun.messages().send({
       from: process.env.MAILGUN_SENDER,
       to: recipient,
       subject: content.subject,
       html: content.html,
-      attachments: content.attachments,
+      attachment: content.attachments.map((file: mailgun.AttachmentParams) => new this.mailgun.Attachment({ data: file.data, filename: file.filename })),
+      // attachments: [
+      //   {
+      //     data: file.buffer,
+      //     filename: file.originalname,
+      //   },
+      // ],
     });
   }
 }
