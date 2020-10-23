@@ -10,7 +10,7 @@ export class MailgunService {
     });
   }
 
-  send(recipient: string, content: { subject: string, html: string, attachments?: mailgun.Attachment[] }) {
+  send(recipient: string, content: { subject: string, html: string, attachments?: any }) {
     return this.mailgun.messages().send({
       from: process.env.MAILGUN_SENDER,
       to: recipient,
