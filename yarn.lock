@@ -878,10 +878,10 @@ https-proxy-agent@^3.0.0:
     agent-base "^4.3.0"
     debug "^3.1.0"
 
-i18n-iso-countries@^6.2.1:
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/i18n-iso-countries/-/i18n-iso-countries-6.2.1.tgz#b37a337b790348f8fa5a2ade9e32ea0206dfc1b6"
-  integrity sha512-lcu9KFffcZzEKYfwzAKZ5TgwoKYoMRoHlb8s3xa0xOYnChjd76OP1gl1n158UNfax4+Oeg9RCTYWWuZpKjwbdQ==
+i18n-iso-countries@^6.2.2:
+  version "6.2.2"
+  resolved "https://registry.yarnpkg.com/i18n-iso-countries/-/i18n-iso-countries-6.2.2.tgz#6b63d00e90ee4022e8c159a9e688d2a8156b0e0b"
+  integrity sha512-sZJeKs5IP93Y+dq/8/NonrEdOudVVuH6BbZVd66edjxVkKVFMtvbM6EkpTbDO3B+d9qFW9XZqdgmGNgNDzciSw==
   dependencies:
     diacritics "1.3.0"
 
