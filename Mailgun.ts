@@ -17,7 +17,7 @@ export class MailgunService {
       subject: content.subject,
       html: content.html,
       attachment: content.attachments ? content.attachments.map(
-        ({ data, filename }) => new this.mailgun.Attachment({ data, filename })
+        ({ data, filename }) => new this.mailgun.Attachment({ data, filename }),
       ) : undefined,
       // attachments: [
       //   {
