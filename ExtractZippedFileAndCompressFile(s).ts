@@ -24,7 +24,8 @@ export const extract2 = (filePath: string) => {
   fs.writeFileSync('./sample.zip', fs.readFileSync(filePath)); // ghi file nén ra một chỗ khác
   const zip = new AdmZip('./sample.zip');
   // const zipEntries = zip.getEntries();
-  // zipEntries.map(zipEntry => zipEntry.entryName); // lấy danh sách tên các file được nén
+  // zipEntries.map(zipEntry => zipEntry.entryName); // lấy danh sách tên các file có trong file nén
+  // zip.extractEntryTo('HelloWorld.txt', `${process.cwd()}/sample`); // trích xuất một file cụ thể có trong file nén
   zip.extractAllTo(`${process.cwd()}/sample`);
   fs.unlinkSync('./sample.zip');
 }
