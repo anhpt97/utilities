@@ -3,8 +3,8 @@ import moment = require('moment');
 import fs = require('fs');
 
 export class ReportService {
-  exportDataToExcel(dataset: any[]) {
-    const headers = { id: 'ID', name: 'Name', age: 'Age', hometown: 'Hometown', contact: 'Contact' };
+  exportDataToExcel(dataset: any[], imagePath?: string) {
+    const headers = { id: 'ID', name: 'Name', age: 'Age', hometown: 'Hometown', contact: 'Contact', time: 'Time' };
 
     // const dataset = [
     //   {
@@ -12,6 +12,7 @@ export class ReportService {
     //     name: 'Phan Anh',
     //     age: 23,
     //     hometown: 'Thái Bình',
+    //     time: new Date().toString(), // nếu là thời gian thì phải convert sang dạng string
     //   },
     // ];
 
@@ -60,6 +61,14 @@ export class ReportService {
         //     ],
         //   },
         // },
+        // imagePath ? {
+        //   image: imagePath, // Only JPG/JPEG and PNG formats are supported
+        //   /* 
+        //     width: 595.28,
+        //     height: 595.28,
+        //     // or fit: [595.28, 595.28],
+        //   */
+        // } : {},
       ],
       styles: {
         header: {
@@ -79,12 +88,13 @@ export class ReportService {
         },
         dataCell: {
           alignment: 'center',
-        }
+        },
       },
       // defaultStyle: {
       //   alignment: 'center',
-      // }
+      // },
     };
+
     const doc = printer.createPdfKitDocument(docDefinition);
     doc.pipe(fs.createWriteStream('./file.pdf'));
     doc.end();

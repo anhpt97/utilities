@@ -1,6 +1,6 @@
 import exceljs = require('exceljs');
-import imageSize from 'image-size';
-import fs = require('fs');
+// import imageSize from 'image-size';
+// import fs = require('fs');
 // import axios from 'axios';
 
 import stylesXform = require('exceljs/lib/xlsx/xform/style/styles-xform.js');
@@ -16,6 +16,16 @@ export class ReportService {
     const worksheet = workbook.addWorksheet('Sheet1');
     worksheet.properties.defaultRowHeight = 20;
 
+    // const dataset = [
+    //   {
+    //     id: 1,
+    //     name: 'Phan Anh',
+    //     age: 23,
+    //     hometown: 'Thái Bình',
+    //     time: new Date(),
+    //   },
+    // ];
+
     worksheet.getCell('A1').value = 'Header';
     worksheet.getCell('A1').font = { name: 'Arial', size: 16, bold: true, color: { argb: 'FF0000' } };
     worksheet.getCell('A1').alignment = { horizontal: 'center', vertical: 'middle', /* wrapText: true // không để tràn ra các ô ở xung quanh hai bên trái và phải */ };
@@ -27,7 +37,7 @@ export class ReportService {
       right: { style: 'thin' },
     };
 
-    const headers = { id: 'ID', name: 'Name', age: 'Age', hometown: 'Hometown', contact: 'Contact' };
+    const headers = { id: 'ID', name: 'Name', age: 'Age', hometown: 'Hometown', time: 'Time' };
     const columns = ['A', 'B', 'C', 'D', 'E'];
 
     Object.values(headers).map((tableHeader, i) => {
@@ -59,21 +69,21 @@ export class ReportService {
       i++;
     }
 
-    if (imagePath) {
-      const dimensions: any = imageSize(imagePath);
+    // if (imagePath) {
+    //   const dimensions: any = imageSize(imagePath);
 
-      const image = workbook.addImage({
-        buffer: fs.readFileSync(imagePath),
-        extension: dimensions.type,
-      });
+    //   const image = workbook.addImage({
+    //     buffer: fs.readFileSync(imagePath),
+    //     extension: dimensions.type,
+    //   });
 
-      const worksheet2 = workbook.addWorksheet('Sheet2');
+    //   const worksheet2 = workbook.addWorksheet('Sheet2');
 
-      worksheet2.addImage(image, {
-        tl: { col: 1, row: 2 },
-        ext: { width: dimensions.width, height: dimensions.height },
-      });
-    }
+    //   worksheet2.addImage(image, {
+    //     tl: { col: 1, row: 2 },
+    //     ext: { width: dimensions.width, height: dimensions.height },
+    //   });
+    // }
 
     // if (imageLink) {
     //   const { data } = await axios.get(imageLink, { responseType: 'arraybuffer' });
@@ -92,7 +102,6 @@ export class ReportService {
     // }
 
     return workbook.xlsx.writeFile('./file.xlsx');
-
     // return workbook.xlsx.writeBuffer();
     // res.setHeader('Content-Disposition', 'attachment; filename=file.xlsx');
     // res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
