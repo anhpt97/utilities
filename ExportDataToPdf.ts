@@ -4,7 +4,7 @@ import fs = require('fs');
 
 export class ReportService {
   exportDataToExcel(dataset: any[]) {
-    const header = { id: 'ID', name: 'Name', age: 'Age', hometown: 'Hometown', contact: 'Contact' };
+    const headers = { id: 'ID', name: 'Name', age: 'Age', hometown: 'Hometown', contact: 'Contact' };
 
     // const dataset = [
     //   {
@@ -26,12 +26,12 @@ export class ReportService {
 
     const printer = new PdfPrinter(fonts);
 
-    const setHeaderRow = (header: string[]) => {
-      return header.map(ele => ({ text: ele, style: 'tableHeader' }));
+    const setHeaderRow = (tableHeaders: string[]) => {
+      return tableHeaders.map(tableHeader => ({ text: tableHeader, style: 'tableHeader' }));
     };
 
     const insertData = (dataset: any[]) => {
-      return dataset.map(data => Object.keys(header).map(ele => ({ text: data[ele] || '', style: 'dataCell' })));
+      return dataset.map(data => Object.keys(headers).map(header => ({ text: data[header] || '', style: 'dataCell' })));
     }
 
     const docDefinition: any = {
@@ -44,9 +44,9 @@ export class ReportService {
           style: 'table',
           table: {
             // headerRows: 1, // giữ header của table ở trang đầu tiên cho các trang sau (nếu có nhiều hơn 1 trang)
-            widths: Object.keys(header).fill('*'), // *: autosize (standard width: 504)
+            widths: Object.keys(headers).fill('*'), // *: autosize (standard width: 504)
             body: [
-              setHeaderRow(Object.values(header)),
+              setHeaderRow(Object.values(headers)),
               ...insertData(dataset),
             ],
           },
