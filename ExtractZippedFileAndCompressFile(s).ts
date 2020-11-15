@@ -13,9 +13,10 @@ export const compress = () => {
   const archive = archiver('zip', { zlib: { level: 9 } }); // level must be >= -1 and <= 9
   archive.append(Buffer.from('Hello World!'), { name: 'HelloWorld.txt' });
   // archive.file('/home/anhphan/Downloads/sample.jpg', { name: 'sample.jpg' }); // append local file
-  archive.finalize();
   archive.pipe(fs.createWriteStream('./sample.zip'));
-  // archive.pipe(res.attachment(`${Date.now()}.zip`));
+  // res.attachment('sample.zip');
+  // archive.pipe(res);
+  archive.finalize();
 }
 
 import AdmZip = require('adm-zip');

@@ -66,6 +66,7 @@ export class ReportService {
           fontSize: 16,
           bold: true,
           margin: [0, 10, 0, 5],
+          // alignment: 'center',
         },
         table: {
           margin: [0, 15, 0, 5],
@@ -85,7 +86,7 @@ export class ReportService {
       // }
     };
     const doc = printer.createPdfKitDocument(docDefinition);
-    doc.pipe(fs.createWriteStream('file.pdf'));
+    doc.pipe(fs.createWriteStream('./file.pdf'));
     doc.end();
     // return printer.createPdfKitDocument(docDefinition);
     // res.setHeader('Content-Disposition', 'attachment; filename=file.pdf');
