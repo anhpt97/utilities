@@ -1,6 +1,7 @@
 import exceljs = require('exceljs');
 import imageSize from 'image-size';
 import fs = require('fs');
+// import axios from 'axios';
 
 import stylesXform = require('exceljs/lib/xlsx/xform/style/styles-xform.js');
 const originalStylesXform = stylesXform.prototype.init;
@@ -10,7 +11,7 @@ stylesXform.prototype.init = function () {
 };
 
 export class ReportService {
-  exportDataToExcel(dataset: any[], imagePath?: string) {
+  exportDataToExcel(dataset: any[], imagePath?: string, imageLink?: string) {
     const workbook = new exceljs.Workbook();
     const worksheet = workbook.addWorksheet('Sheet1');
     worksheet.properties.defaultRowHeight = 20;
@@ -73,6 +74,22 @@ export class ReportService {
         ext: { width: dimensions.width, height: dimensions.height },
       });
     }
+
+    // if (imageLink) {
+    //   const { data } = await axios.get(imageLink, { responseType: 'arraybuffer' });
+    //   const dimensions2: any = imageSize(data);
+    //   const image2 = workbook.addImage({
+    //     buffer: data,
+    //     extension: dimensions2.type,
+    //   });
+
+    //   const worksheet3 = workbook.addWorksheet('Sheet3');
+
+    //   worksheet3.addImage(image2, {
+    //     tl: { col: 1, row: 2 },
+    //     ext: { width: dimensions2.width, height: dimensions2.height },
+    //   });
+    // }
 
     return workbook.xlsx.writeFile('./file.xlsx');
 
