@@ -24,6 +24,7 @@
     "nodemailer": "^6.4.16",
     "numeral": "^2.0.6",
     "pdfmake": "^0.1.68",
+    "screenshot-desktop": "^1.12.3",
     "twilio": "^3.51.0",
     "usa-states": "^0.0.5"
   },
