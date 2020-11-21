@@ -1,3 +1,4 @@
+/* tslint:disable: no-console */
 import accounting = require('accounting');
 import numeral = require('numeral');
 

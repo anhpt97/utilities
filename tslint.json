@@ -4,7 +4,7 @@
     "eofline": true,
     "no-unused-expression": true,
     "max-line-length": false,
-    "no-console": false,
+    "no-console": true,
     "no-construct": true,
     "no-debugger": true,
     "no-duplicate-super": true,
