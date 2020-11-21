@@ -5,4 +5,4 @@ import screenshot = require('screenshot-desktop');
 export const takeScreenshot = async () => {
   // fs.writeFileSync('./Screenshot.png', await screenshot({ format: 'png' }));
   return screenshot({ filename: './Screenshot.png' });
-}
+};

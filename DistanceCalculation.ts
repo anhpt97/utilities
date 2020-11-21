@@ -11,4 +11,4 @@ export const getDistance = (
     latitude: endPoint.lat2,
     longitude: endPoint.lng2,
   });
-}
+};

@@ -6,6 +6,7 @@ import exceljs = require('exceljs');
 import stylesXform = require('exceljs/lib/xlsx/xform/style/styles-xform.js');
 const originalStylesXform = stylesXform.prototype.init;
 stylesXform.prototype.init = function () {
+  // eslint-disable-next-line prefer-rest-params
   originalStylesXform.apply(this, arguments);
   this._addFont({ name: 'Arial', size: 11 });
 };

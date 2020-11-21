@@ -5,4 +5,4 @@ export const getListOfStatesAndTerritoriesOfUSA = () => {
     name: state.name,
     abbreviation: state.abbreviation,
   }));
-}
+};

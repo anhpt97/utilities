@@ -5,7 +5,7 @@ export const extract = async (filePath: string) => {
   fs.writeFileSync('./sample.zip', fs.readFileSync(filePath)); // ghi file ra một chỗ khác
   await extractZip('./sample.zip', { dir: `${process.cwd()}/sample` });
   fs.unlinkSync('./sample.zip');
-}
+};
 
 import archiver = require('archiver');
 
@@ -17,7 +17,7 @@ export const compress = () => {
   // res.attachment('sample.zip');
   // archive.pipe(res);
   archive.finalize();
-}
+};
 
 import AdmZip = require('adm-zip');
 
@@ -29,7 +29,7 @@ export const extract2 = (filePath: string) => {
   // zip.extractEntryTo('HelloWorld.txt', `${process.cwd()}/sample`); // trích xuất một file cụ thể có trong file nén
   zip.extractAllTo(`${process.cwd()}/sample`);
   fs.unlinkSync('./sample.zip');
-}
+};
 
 export const compress2 = () => {
   const zip = new AdmZip();
@@ -37,4 +37,4 @@ export const compress2 = () => {
   // zip.addLocalFile('/home/anhphan/Downloads/sample.jpg'); // append local file
   zip.writeZip('./sample.zip');
   // res.send(zip.toBuffer());
-}
+};

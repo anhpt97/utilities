@@ -33,7 +33,7 @@ export class ReportService {
 
     const insertData = (dataset: any[]) => {
       return dataset.map(data => Object.keys(headers).map(header => ({ text: data[header] || '', style: 'dataCell' })));
-    }
+    };
 
     const docDefinition: any = {
       // pageOrientation: 'landscape', // xoay ngang
@@ -63,7 +63,7 @@ export class ReportService {
         // },
         // imagePath ? {
         //   image: imagePath, // Only JPG/JPEG and PNG formats are supported
-        //   /* 
+        //   /*
         //     width: 595.28,
         //     height: 595.28,
         //     // or fit: [595.28, 595.28],
