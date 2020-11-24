@@ -29,7 +29,7 @@ export class ReportService {
 
     worksheet.getCell('A1').value = 'Header';
     worksheet.getCell('A1').font = { name: 'Arial', size: 16, bold: true, color: { argb: 'FF0000' } };
-    worksheet.getCell('A1').alignment = { horizontal: 'center', vertical: 'middle', /* wrapText: true // không để tràn ra các ô ở xung quanh hai bên trái và phải */ };
+    worksheet.getCell('A1').alignment = { horizontal: 'center', vertical: 'middle' /* wrapText: true // không để tràn ra các ô ở xung quanh hai bên trái và phải */ };
     worksheet.mergeCells('A1', 'E1');
     worksheet.getCell('A1').border = {
       top: { style: 'thin' },
