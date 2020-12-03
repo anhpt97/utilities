@@ -29,7 +29,7 @@
     "numeral": "^2.0.6",
     "pdfmake": "^0.1.68",
     "screenshot-desktop": "^1.12.3",
-    "twilio": "^3.52.0",
+    "twilio": "^3.53.0",
     "usa-states": "^0.0.5"
   },
   "devDependencies": {
