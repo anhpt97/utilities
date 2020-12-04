@@ -51,10 +51,10 @@
     lodash.isfunction "^3.0.9"
     lodash.isnil "^4.0.0"
 
-"@fast-csv/parse@4.3.3":
-  version "4.3.3"
-  resolved "https://registry.yarnpkg.com/@fast-csv/parse/-/parse-4.3.3.tgz#1ab4443213a63ced960fd618ea476e4e51f0f8df"
-  integrity sha512-mXrCmyyZxbcdW/kZ8tVMrb1DJrJMNGWxHmB4OSuEL96so/X14E1O0w5QFiyodfs+oXoNGwbku8bx2Lq2tiODAA==
+"@fast-csv/parse@4.3.6":
+  version "4.3.6"
+  resolved "https://registry.yarnpkg.com/@fast-csv/parse/-/parse-4.3.6.tgz#ee47d0640ca0291034c7aa94039a744cfb019264"
+  integrity sha512-uRsLYksqpbDmWaSmzvJcuApSEe38+6NQZBUsuAyMZKqHxH0g1wcJgsKUvN3WC8tewaqFjBMMGrkHmC+T7k8LvA==
   dependencies:
     "@types/node" "^14.0.1"
     lodash.escaperegexp "^4.1.2"
@@ -831,6 +831,11 @@ crc@^3.4.4:
   dependencies:
     buffer "^5.1.0"
 
+create-require@^1.1.0:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/create-require/-/create-require-1.1.1.tgz#c1d7e8f1e5f6cfc9ff65f9cd352d37348756c333"
+  integrity sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==
+
 cross-spawn@^7.0.2:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-7.0.3.tgz#f73a85b9d5d41d045551c177e2882d4ac85728a6"
@@ -1164,10 +1169,10 @@ eslint-config-prettier@^6.15.0:
   dependencies:
     get-stdin "^6.0.0"
 
-eslint-plugin-prettier@^3.1.4:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-3.1.4.tgz#168ab43154e2ea57db992a2cd097c828171f75c2"
-  integrity sha512-jZDa8z76klRqo+TdGDTFJSavwbnWK2ZpqGKNZ+VvweMW516pDUMmQ2koXvxEE4JhzNvTv+radye/bWGBmA6jmg==
+eslint-plugin-prettier@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-3.2.0.tgz#af391b2226fa0e15c96f36c733f6e9035dbd952c"
+  integrity sha512-kOUSJnFjAUFKwVxuzy6sA5yyMx6+o9ino4gCdShzBNx4eyFRudWRYKCFolKjoM40PEiuU6Cn7wBLfq3WsGg7qg==
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
@@ -1369,12 +1374,12 @@ extsprintf@^1.2.0:
   integrity sha1-4mifjzVvrWLMplo6kcXfX5VRaS8=
 
 fast-csv@^4.1.2:
-  version "4.3.5"
-  resolved "https://registry.yarnpkg.com/fast-csv/-/fast-csv-4.3.5.tgz#b62d8303fc0d7ccd56f9d8650c1b5144ea5bddad"
-  integrity sha512-7csO4GADMDhVcf8UI5/TPdZbNkeToUx2HaRC1KPxYNWjAZ/SAFBBRJGhzlDWg0vgKm92toH6gR7+tsMcc0Fx8Q==
+  version "4.3.6"
+  resolved "https://registry.yarnpkg.com/fast-csv/-/fast-csv-4.3.6.tgz#70349bdd8fe4d66b1130d8c91820b64a21bc4a63"
+  integrity sha512-2RNSpuwwsJGP0frGsOmTb9oUF+VkFSM4SyLTDgwf2ciHWTarN0lQTC+F2f/t5J9QjW+c65VFIAAu85GsvMIusw==
   dependencies:
     "@fast-csv/format" "4.3.5"
-    "@fast-csv/parse" "4.3.3"
+    "@fast-csv/parse" "4.3.6"
 
 fast-deep-equal@^3.1.1:
   version "3.1.3"
@@ -1719,10 +1724,10 @@ https-proxy-agent@^3.0.0:
     agent-base "^4.3.0"
     debug "^3.1.0"
 
-i18n-iso-countries@^6.2.2:
-  version "6.2.2"
-  resolved "https://registry.yarnpkg.com/i18n-iso-countries/-/i18n-iso-countries-6.2.2.tgz#6b63d00e90ee4022e8c159a9e688d2a8156b0e0b"
-  integrity sha512-sZJeKs5IP93Y+dq/8/NonrEdOudVVuH6BbZVd66edjxVkKVFMtvbM6EkpTbDO3B+d9qFW9XZqdgmGNgNDzciSw==
+i18n-iso-countries@^6.3.0:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/i18n-iso-countries/-/i18n-iso-countries-6.3.0.tgz#66c291e070ad020c294e731dba0027e3c8bc76a4"
+  integrity sha512-8sqtqotRmleouJBtbohCnjau4OH/z1nZ6sPLiC/7Hbi0Tt7dOI2o/+ww8wj5EegOBFg6m/JJUbOPdS/i53wQZw==
   dependencies:
     diacritics "1.3.0"
 
@@ -3135,12 +3140,13 @@ tough-cookie@~2.5.0:
   resolved "https://registry.yarnpkg.com/traverse/-/traverse-0.3.9.tgz#717b8f220cc0bb7b44e40514c22b2e8bbc70d8b9"
   integrity sha1-cXuPIgzAu3tE5AUUwisui7xw2Lk=
 
-ts-node@^9.0.0:
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-9.0.0.tgz#e7699d2a110cc8c0d3b831715e417688683460b3"
-  integrity sha512-/TqB4SnererCDR/vb4S/QvSZvzQMJN8daAslg7MeaiHvD8rDZsSfXmNeNumyZZzMned72Xoq/isQljYSt8Ynfg==
+ts-node@^9.1.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-9.1.0.tgz#95eae4c6d0f94f2545884078e1eb1b14d2155639"
+  integrity sha512-0yqcL4sgruCvM+w64LiAfNJo6+lHfCYc5Ajj4yiLNkJ9oZ2HWaa+Kso7htYOOxVQ7+csAjdUjffOe9PIqC4pMg==
   dependencies:
     arg "^4.1.0"
+    create-require "^1.1.0"
     diff "^4.0.1"
     make-error "^1.1.1"
     source-map-support "^0.5.17"
