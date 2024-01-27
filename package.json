@@ -1,0 +1,36 @@
+{
+  "name": "utilities",
+  "license": "UNLICENSED",
+  "author": "Anh Phan <phanlong315@gmail.com>",
+  "dependencies": {
+    "@onesignal/node-onesignal": "^2.0.1-beta2",
+    "@sendgrid/mail": "^8.1.0",
+    "accounting": "^0.4.1",
+    "archiver": "^6.0.1",
+    "axios": "^1.6.7",
+    "big.js": "^6.2.1",
+    "dayjs": "^1.11.10",
+    "dotenv": "^16.4.1",
+    "exceljs": "^4.4.0",
+    "flat": "^5.0.2",
+    "image-size": "^1.1.1",
+    "ioredis": "^5.3.2",
+    "jszip": "^3.10.1",
+    "mailgun.js": "^10.0.1",
+    "nodemailer": "^6.9.8",
+    "numeral": "^2.0.6",
+    "pdfmake": "^0.2.9",
+    "sharp": "^0.33.2"
+  },
+  "devDependencies": {
+    "@types/accounting": "^0.4.5",
+    "@types/archiver": "^6.0.2",
+    "@types/big.js": "^6.2.2",
+    "@types/node": "^20.11.8",
+    "@types/nodemailer": "^6.4.14",
+    "@types/numeral": "^2.0.5",
+    "@types/pdfmake": "^0.2.8",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
